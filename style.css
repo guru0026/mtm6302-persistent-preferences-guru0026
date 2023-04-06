@@ -7,13 +7,17 @@ html {
 }
 
 .main {
-    height: 50vh;
+    height: 60vh;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 .secondary {
     justify-content: center;
     background: #ebebeb;
     min-height: 100vh;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 h1 {
@@ -72,11 +76,5 @@ ol {
 [data-bs-theme="dark"] {
     .secondary {
         background: #000000;
-    }
-}
-
-@media only screen and (max-width: 550px) {
-    ol {
-        font-size: 0.8rem;
     }
 }

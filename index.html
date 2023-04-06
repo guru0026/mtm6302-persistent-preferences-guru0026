@@ -14,26 +14,37 @@
     <div class="row">
         <div class="main col-lg-8 col-12">
             <h1>Shopping List</h1>
-            <ol class="list-group " id="shoppinglist"></ol>
+            <ol class="list-group d-flex flex-wrap " id="shoppinglist"></ol>
         </div>
-        <div class="secondary col-lg-4 col-12">
+        <div id="settings" class="secondary col-lg-3 col-12">
             <h2>Preferences</h2>
 
             <div class="menu">
                 <h4>Theme</h4>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="light">
+                    <input class="form-check-input" type="radio" name="theme" id="light" value="light">
                     <label class="form-check-label" for="inlineRadio1">Light</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="dark">
+                    <input class="form-check-input" type="radio" name="theme" id="dark" value="dark">
                     <label class="form-check-label" for="inlineRadio2">Dark</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="blue">
+                    <input class="form-check-input" type="radio" name="theme" id="blue" value="blue">
                     <label class="form-check-label" for="inlineRadio3">Blue</label>
                 </div>
             </div>
+
+            <!-- <div class="dropdown">
+                <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  List Style
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" id="flush" href="#">Flush</a></li>
+                  <li><a class="dropdown-item" id="numbered" href="#">Numbered</a></li>
+                  <li><a class="dropdown-item" id="horizontal" href="#">Horizontal</a></li>
+                </ul>
+            </div> -->
 
             <div class="menu">
                 <h4>List Style</h4>
@@ -51,16 +62,7 @@
                   </div>
             </div>
             
-            <!-- <div class="dropdown">
-                <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                  List Style
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  <li><a class="dropdown-item" href="#">Light</a></li>
-                  <li><a class="dropdown-item" href="#">Dark</a></li>
-                  <li><a class="dropdown-item" href="#">Blue</a></li>
-                </ul>
-            </div> -->
+            
         </div>
     </div>
     

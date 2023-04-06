@@ -16,9 +16,10 @@ for (let i = 0; i < shoppingItems.length; i++) {
     shoppingList.appendChild(shoppingItem);
 }
 
-const light = document.getElementById(`inlineRadio1`);
-const dark = document.getElementById(`inlineRadio2`);
-const blue = document.getElementById(`inlineRadio3`);
+
+const light = document.getElementById(`light`);
+const dark = document.getElementById(`dark`);
+const blue = document.getElementById(`blue`);
 const html = document.querySelector(`html`);
 
 light.addEventListener("change", function () {
@@ -39,10 +40,28 @@ blue.addEventListener("change", function () {
     }
 });
 
+
+
+function saveThemePreference() {
+    const preference = {
+      theme: document.querySelector('input[name="theme"]:checked').value
+    };
+    localStorage.setItem("themePreference", JSON.stringify(preference));
+}
+
+function applyThemePreference() {
+    const preference = JSON.parse(localStorage.getItem("themePreference"));
+
+    if (preference) {
+        document.getElementById(preference.theme).checked = true;
+        html.setAttribute("data-bs-theme", preference.theme.value);
+    }
+}
+  
+
 const checkNumber = document.getElementById(`inlineCheckbox1`);
 const checkCheckbox = document.getElementById(`inlineCheckbox2`);
 const checkBadge = document.getElementById(`inlineCheckbox3`);
-let span = document.createElement("span");
 
 checkNumber.addEventListener("change", function () {
     if (checkNumber.checked) {
@@ -58,9 +77,9 @@ checkNumber.addEventListener("change", function () {
 checkCheckbox.addEventListener("change", function () {
     if (checkCheckbox.checked) {
         shoppingList.classList.add("list-group-flush");
-        const isChecked = checkbox.checked;
-        const key = checkbox.id;
-        localStorage.setItem(key, isChecked);
+        // const isChecked = checkbox.checked;
+        // const key = checkbox.id;
+        // localStorage.setItem(key, isChecked);
     } else {
         shoppingList.classList.remove("list-group-flush")
     }
@@ -72,6 +91,7 @@ checkBadge.addEventListener("change", function () {
         // span.textContent = "Span text";
         // shoppingItem.appendChild(span);
         shoppingList.classList.add("list-group-horizontal");
+        shoppingList.classList.add("list-group-horizontal");
         const isChecked = checkbox.checked;
         const key = checkbox.id;
         localStorage.setItem(key, isChecked);
@@ -79,3 +99,5 @@ checkBadge.addEventListener("change", function () {
         shoppingList.classList.remove("list-group-horizontal")
     }
 });
+
+const settings = JSON.parse(localstorage.getItem('settings')) || 'dark';
