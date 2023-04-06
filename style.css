@@ -1,0 +1,48 @@
+html {
+    text-align: center;
+}
+
+.overall {
+    height: 100vh;
+}
+
+.main {
+    height: 50vh;
+}
+
+.secondary {
+    justify-content: center;
+    background: #dddddd;
+    min-height: 100vh;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    padding: 1rem;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+ul {
+    font-size: 1.5rem;
+    list-style: none;
+}
+
+:root {
+    --bg-color: #E8E6DC;
+    --bg-light: #DCDACA;
+    --font-color: #3D3D3D;
+    --font-light: #202020;
+}
+
+.dark-theme {
+    --bg-color: #171923;
+      --bg-light: #232535;
+      --font-color: #c5cddb;
+      --font-light: #ffffff;
+  }
