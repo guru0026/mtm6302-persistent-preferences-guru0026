@@ -19,15 +19,23 @@ for (let i = 0; i < shoppingItems.length; i++) {
 const light = document.getElementById(`inlineRadio1`);
 const dark = document.getElementById(`inlineRadio2`);
 const blue = document.getElementById(`inlineRadio3`);
-const html = document.getElementsByTagName(`html`);
+const html = document.querySelector(`html`);
 
 light.addEventListener("change", function () {
+    if (light.checked) {
+        html.setAttribute("data-bs-theme","light");
+    }
+});
+
+dark.addEventListener("change", function () {
     if (dark.checked) {
         html.setAttribute("data-bs-theme","dark");
-    } else if (blue.checked){
+    }
+});
+
+blue.addEventListener("change", function () {
+    if (blue.checked) {
         html.setAttribute("data-bs-theme","blue");
-    } else {
-        html.setAttribute("data-bs-theme","light");
     }
 });
 
@@ -38,7 +46,10 @@ let span = document.createElement("span");
 
 checkNumber.addEventListener("change", function () {
     if (checkNumber.checked) {
-        shoppingList.classList.add("list-group-numbered")
+        shoppingList.classList.add("list-group-numbered");
+        const isChecked = checkbox.checked;
+        const key = checkbox.id;
+        localStorage.setItem(key, isChecked);
     } else {
         shoppingList.classList.remove("list-group-numbered")
     }
@@ -46,7 +57,10 @@ checkNumber.addEventListener("change", function () {
 
 checkCheckbox.addEventListener("change", function () {
     if (checkCheckbox.checked) {
-        shoppingList.classList.add("list-group-flush")
+        shoppingList.classList.add("list-group-flush");
+        const isChecked = checkbox.checked;
+        const key = checkbox.id;
+        localStorage.setItem(key, isChecked);
     } else {
         shoppingList.classList.remove("list-group-flush")
     }
@@ -57,7 +71,10 @@ checkBadge.addEventListener("change", function () {
         // span.classList.add("badge bg-primary rounded-pill");
         // span.textContent = "Span text";
         // shoppingItem.appendChild(span);
-        shoppingList.classList.add("list-group-horizontal")
+        shoppingList.classList.add("list-group-horizontal");
+        const isChecked = checkbox.checked;
+        const key = checkbox.id;
+        localStorage.setItem(key, isChecked);
     } else {
         shoppingList.classList.remove("list-group-horizontal")
     }
