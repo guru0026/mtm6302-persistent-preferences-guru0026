@@ -10,15 +10,34 @@ const shoppingItems = [
 for (let i = 0; i < shoppingItems.length; i++) {
     const shoppingItem = document.createElement("li");
     shoppingItem.textContent = shoppingItems[i];
+    shoppingItem.classList.add("list-group-item")
     shoppingList.appendChild(shoppingItem);
 }
 
-const radioLight = document.getElementById(`inlineRadio1`);
-const radioDark = document.getElementById(`inlineRadio2`);
-const radioBlue = document.getElementById(`inlineRadio3`);
+const checkNumber = document.getElementById(`inlineCheckbox1`);
+const checkCheckbox = document.getElementById(`inlineCheckbox2`);
+const checkBadge = document.getElementById(`inlineCheckbox3`);
 
-radio1.addEventListener("change", function () {
-    if (radioBlue.checked) {
-        shoppingList.classList.add("")
+checkNumber.addEventListener("change", function () {
+    if (checkNumber.checked) {
+        shoppingList.classList.add("list-group-numbered")
+    } else {
+        shoppingList.classList.remove("list-group-numbered")
     }
-})
+});
+
+checkCheckbox.addEventListener("change", function () {
+    if (checkCheckbox.checked) {
+        shoppingList.classList.add("list-group-numbered")
+    } else {
+        shoppingList.classList.remove("list-group-numbered")
+    }
+});
+
+checkBadge.addEventListener("change", function () {
+    if (checkBadge.checked) {
+        shoppingList.classList.add("list-group-numbered")
+    } else {
+        shoppingList.classList.remove("list-group-numbered")
+    }
+});
