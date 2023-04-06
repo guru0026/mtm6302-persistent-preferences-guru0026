@@ -33,7 +33,7 @@ ul {
     list-style: none;
 }
 
-:root {
+/* :root {
     --bg-color: #E8E6DC;
     --bg-light: #DCDACA;
     --font-color: #3D3D3D;
@@ -45,4 +45,4 @@ ul {
       --bg-light: #232535;
       --font-color: #c5cddb;
       --font-light: #ffffff;
-  }
+  } */
